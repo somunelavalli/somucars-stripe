@@ -19,7 +19,7 @@ function Register() {
     <div className="login">
       {loading == true && <Spinner />}
       <Row gutter={16} className="d-flex align-items-center">
-        <Col lg={16} className={{ position: "relative" }}>
+        <Col lg={16} style={{ position: "relative" }}>
           <img
             className="w-100"
             data-aos="slide-left"
