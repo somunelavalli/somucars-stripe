@@ -3,9 +3,9 @@ import { message } from "antd";
 
 export const userLogin = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
-  const baseurl = "http://localhost:4500";
+  // const baseurl = "http://localhost:4500";
   try {
-    const response = await axios.post(`${baseurl}/api/users/login`, reqObj);
+    const response = await axios.post(`/api/users/login`, reqObj);
     localStorage.setItem("user", JSON.stringify(response.data));
     message.success("Login Success");
     dispatch({ type: "LOADING", payload: false });
@@ -21,9 +21,9 @@ export const userLogin = (reqObj) => async (dispatch) => {
 
 export const userRegister = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
-  const baseurl = "http://localhost:4500";
+  // const baseurl = "http://localhost:4500";
   try {
-    const response = await axios.post(`${baseurl}/api/users/register`, reqObj);
+    const response = await axios.post(`/api/users/register`, reqObj);
     message.success("User Registered Success");
     setTimeout(() => {
       window.location.href = "/login";

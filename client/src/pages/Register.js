@@ -21,6 +21,7 @@ function Register() {
       <Row gutter={16} className="d-flex align-items-center">
         <Col lg={16} className={{ position: "relative" }}>
           <img
+            className="w-100"
             data-aos="slide-left"
             data-aos-duration="1500"
             src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNhciUyMHdpdGglMjBibGFjayUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
@@ -47,14 +48,14 @@ function Register() {
               label="Password"
               rules={[{ required: true }]}
             >
-              <Input />
+              <Input type={"password"} />
             </Form.Item>
             <Form.Item
               name="cpassword"
               label="Confirm Password"
               rules={[{ required: true }]}
             >
-              <Input />
+              <Input type={"password"} />
             </Form.Item>
             <button className="btn1 mt-2 mb-3">Register</button>
             <br />
