@@ -66,7 +66,6 @@ function AdminHome() {
                         style={{ color: "red", cursor: "pointer" }}
                       />
                     </Popconfirm>
-                    ,
                   </div>
                 </div>
               </div>
