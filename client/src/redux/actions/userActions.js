@@ -9,9 +9,15 @@ export const userLogin = (reqObj) => async (dispatch) => {
     localStorage.setItem("user", JSON.stringify(response.data));
     message.success("Login Success");
     dispatch({ type: "LOADING", payload: false });
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 500);
+    if (response.data.isAdmin) {
+      setTimeout(() => {
+        window.location.href = "/admin";
+      }, 500);
+    } else {
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 500);
+    }
   } catch (err) {
     console.log(err);
     message.error("Something went wrong");
